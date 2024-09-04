@@ -1,117 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-
-@font-face {
-    font-family: kenarose; src: url(../fuentes/Kenarose.ttf);
+a{
+    text-decoration: none;
+    color: #ffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-body {
+body{
     background: black;
-    height: 800px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
-.titulo{
-    margin: 85px 50px;
+.container{
+    margin: 100px;
+    height: 700px;
+    color: #ffff;
     display: flex;
-    height: 90%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.titulo .titulo-txt{
-    font-family: kenarose;
-    text-shadow: 5px 5px 0px #eb452b,
-                 10px 10px 0px #efa032,
-                 15px 15px 0px #46b59b,
-                 20px 20px 0px #017e7f,
-                 25px 25px 0px #052939,
-                 30px 30px 0px #c11a2b;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    margin: 50px 50px;
-    font-size: 90px;
-    color: white;
+.container .title{
+    font-size: 103px;
+    margin: 40px;
+}
+
+.container .list{
+    margin: 80px;
+}
+
+.container .item-list{
+    width: 400px;
+    height: 50px;
+    margin: 30px;
+    font-size: 40px;
+}
+
+.item-list::after{
+    content: "";
+    background: linear-gradient(to right, red, blue);
+    height: 4px;
+    width: 0px;
     position: absolute;
-    text-align: center;
-}
-
-.titulo .titulo-img{
-    height: 100%;
-    width: auto;
-    margin: auto;
-}
-
-.slider{
-    margin: auto auto;
-    width: 80%;
-    height: var(--height);
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        gray,
-        transparent
-    );
-}
-
-.slider .lista{
     display: flex;
-    width: 100%;
-    min-width: calc(var(--width) * var(--quantity));
-    position: relative;
+    transition: .5s ease;
+    border-radius: 5px;
 }
 
-.slider .lista .item{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    animation: autoRun 15s linear infinite;
-    transition: filter 0.5s;
-    animation-delay: calc((10s / var(--quantity) * (var(--position) - 1)));
-}
-
-.slider .lista .bx{
-    margin-left: 10px;
-    display: flex;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-}
-
-.slider .lista .item-txt{
-    margin-left: 10px;
-    display: flex;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-@keyframes autoRun{
-    from{
-        left: 100%;
-    } to {
-        left: calc(var(--width) * -1);
-    }
-}
-
-.slider:hover .item{
-    animation-play-state: paused!important;
-    filter: grayscale(1);
-}
-
-.item:hover{
-    transform: scale(1.5);
+.item-list:hover::after{
+    width: 400px;
 }
