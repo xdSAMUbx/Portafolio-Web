@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 @font-face {
     font-family: InputSerif;
     src: url(../fuentes/Input_Fonts/InputSerif/InputSerif/InputSerif-Regular.ttf);
@@ -61,11 +63,81 @@ body{
 }
 /*------------------------------------INTRODUCCION----------------------*/
 .main-intro{
+    font-family: "Inconsolata",monospace;
+    padding: 100px 100px 100px;
+    font-size: 20px;
+    background: #30302e;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     color: white;
 }
+
+.intro .intro-title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-txt, .intro-txt-2{
+    margin: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-txt{
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.img-intro{
+    border: solid 5px #434341;
+    display: flex;
+    height: 25rem;
+    width: 40rem;
+}
+
+.obj{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.obj-list{
+    margin-top: 20px;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.obj-list .item-list-objt{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    counter-increment: numbers;
+}
+
+.obj-list .item-list-objt::before{
+    content: counter(numbers);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background-color: #8e8e8d;
+    position: absolute;
+    left: -23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7em;
+    font-weight: bold;
+}
+
 /*------------------------------------DIDACTO----------------------*/
 .didacto{
-    padding: 150px 100px 100px;
+    font-family: "Inconsolata",monospace;
+    padding: 100px 100px 100px;
     background: #30302e;
     box-sizing: border-box;
     width: 75%;
@@ -74,7 +146,7 @@ body{
 }
 
 .didacto .title-didacto{
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
 }
 
