@@ -1,0 +1,92 @@
+@font-face {
+    font-family: InputSerif;
+    src: url(../fuentes/Input_Fonts/InputSerif/InputSerif/InputSerif-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #000;
+    position: sticky;
+    width: 100%;
+    transition: top 0.5s ease-in-out; 
+}
+
+body{
+    background: #000;
+}
+
+main{
+    background: #30302e;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.list{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list .item-list{
+    font-family: InputSerif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 100%;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.item-list::after{
+    content: "";
+    background: linear-gradient(to right, red,blueviolet, blue);
+    top: 3rem;
+    height: 4px;
+    min-width: 0rem;
+    max-width: 0rem;
+    position: absolute;
+    display: flex;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+
+.item-list:hover::after{
+    min-width: 9rem;
+    max-width: 14rem;
+}
+/*------------------------------------INTRODUCCION----------------------*/
+
+/*------------------------------------DIDACTO----------------------*/
+.didacto{
+    color: white;
+}
+
+.didacto .title-didacto{
+    padding: 2rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.didacto .txt-didacto{
+    font-size: 20px;
+    padding: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+/*------------------------------------DESARROLLO----------------------*/
+
+/*------------------------------------LÉXICO----------------------*/
+
+/*------------------------------------COMENTARIOS----------------------*/
