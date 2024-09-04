@@ -14,7 +14,7 @@ body{
 
 .container{
     margin: 100px;
-    height: 700px;
+    height: 600px;
     color: #ffff;
     display: flex;
     align-items: center;
@@ -50,4 +50,12 @@ body{
 
 .item-list:hover::after{
     width: 400px;
+}
+
+.id{
+    color: #ffff;
+    width: 300px;
+    text-align: end;
+    margin: 30px 100px;
+    margin-left: auto;
 }
